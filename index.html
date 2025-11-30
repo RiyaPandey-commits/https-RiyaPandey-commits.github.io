@@ -1,61 +1,242 @@
-<!DOCTYPE html>
+# Creating a minimalist premium single-page resume (HTML + CSS) for Riya Pandey
+# Files will be written to /mnt/data and made available for download after execution.
+
+html = """<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Pandey | QA Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riya Pandey — Resume</title>
+  <link rel="stylesheet" href="riya_resume.css">
 </head>
 <body>
-
-    <header>
+  <div class="page">
+    <header class="header">
+      <div class="header-left">
         <h1>Riya Pandey</h1>
-        <p>Software Quality Analyst | Manual + Automation Testing | Healthcare Domain Expert</p>
+        <p class="title">Software Quality Analyst</p>
+      </div>
+      <div class="header-right">
+        <p class="contact"><strong>Email:</strong> <a href="mailto:riyapandey0825@gmail.com">riyapandey0825@gmail.com</a></p>
+        <p class="contact"><strong>Phone:</strong> +91 7597279607</p>
+        <p class="contact"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/riya-pandey-qa/" target="_blank">linkedin.com/in/riya-pandey-qa</a></p>
+        <p class="contact"><strong>Location:</strong> Jaipur, India</p>
+      </div>
     </header>
 
-    <section class="about">
-        <h2>About Me</h2>
+    <main class="content">
+      <section class="summary card">
+        <h2>Professional Summary</h2>
         <p>
-            I am a results-driven Software Quality Analyst with 3+ years of expertise in Manual Testing,
-            Automation Testing (Python + Selenium), API Testing and Agile methodologies. I specialize in
-            healthcare applications and have worked on more than 15 real projects.
+          Results-driven Software Quality Analyst with 3+ years of experience testing healthcare applications (web & mobile).
+          Skilled in manual and automated testing (Python + Selenium), API testing with Postman, and working in Agile/Scrum teams.
+          Strong focus on building reliable test strategies, improving release quality, and automating repetitive test flows.
         </p>
-    </section>
+      </section>
 
-    <section class="skills">
-        <h2>Core Skills</h2>
-        <ul>
-            <li>Manual & Automation Testing</li>
-            <li>Python + Selenium WebDriver</li>
-            <li>API Testing (Postman)</li>
-            <li>Test Strategy & Planning</li>
-            <li>Agile & Scrum</li>
-            <li>Healthcare Application Testing</li>
-        </ul>
-    </section>
+      <div class="columns">
+        <section class="left-column">
+          <div class="card skills">
+            <h3>Core Competencies</h3>
+            <ul>
+              <li>Manual & Automated Testing</li>
+              <li>API Testing (Postman)</li>
+              <li>Cross-browser & Cross-platform Testing</li>
+              <li>Test Design • Regression • Smoke / Sanity</li>
+              <li>Test Planning & Execution</li>
+            </ul>
+          </div>
 
-    <section class="projects">
-        <h2>Featured Projects</h2>
+          <div class="card tech">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li>Python • Selenium WebDriver • Pytest</li>
+              <li>SQL • Database Testing</li>
+              <li>Postman • API Validation</li>
+              <li>JIRA • Redmine • Test Documentation</li>
+            </ul>
+          </div>
 
-        <div class="project">
-            <h3>VCDoctor Healthcare Platform</h3>
-            <p>End-to-end testing for appointment booking, video consultations, and billing workflows. Improved post-release defects by 40%.</p>
-        </div>
+          <div class="card certifications">
+            <h3>Certifications</h3>
+            <ul>
+              <li>API Testing with Postman — Udemy (Apr 2025)</li>
+              <li>Python Programming — Udemy (Dec 2024)</li>
+              <li>Agile Testing Fundamentals — Udemy (Jan 2025)</li>
+            </ul>
+          </div>
 
-        <div class="project">
-            <h3>AlexiaHTC Medical Management System</h3>
-            <p>Regression and automation testing for patient modules and physician dashboards.</p>
-        </div>
+          <div class="card education">
+            <h3>Education</h3>
+            <p><strong>M.Sc. Mathematics</strong>, Rajasthan University, Jaipur — 2022</p>
+            <p><strong>B.Sc.</strong>, Poddar International College, Rajasthan University — 2018</p>
+          </div>
+        </section>
 
-        <div class="project">
-            <h3>I-Medicus Telemedicine Platform</h3>
-            <p>Mobile + web testing focusing on appointment workflows and in-app messaging.</p>
-        </div>
-    </section>
+        <section class="right-column">
+          <div class="card experience">
+            <h3>Professional Experience</h3>
 
-    <footer>
-        <p>Contact: riyapandey0825@gmail.com | <a href="https://www.linkedin.com/in/riya-pandey-qa/" target="_blank">LinkedIn</a></p>
+            <div class="job">
+              <h4>Software Quality Analyst — Dreamsoft4u Pvt. Ltd., Jaipur</h4>
+              <p class="period">August 2022 — Present</p>
+              <ul>
+                <li>Led end-to-end testing for 3 major healthcare applications across web and mobile platforms, ensuring high functional coverage.</li>
+                <li>Designed and executed 500+ test cases covering patient management, consultations, and billing workflows.</li>
+                <li>Reduced testing cycle time by ~25% by implementing automated test scripts using Selenium WebDriver with Python.</li>
+                <li>Performed API testing using Postman to validate data integrity and integration points.</li>
+                <li>Managed defect lifecycle using Redmine; achieved ~95% defect resolution rate.</li>
+                <li>Mentored junior testers and authored QA documentation including test plans and execution reports.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="card projects">
+            <h3>Key Projects</h3>
+
+            <div class="proj">
+              <h4>VCDoctor Healthcare Platform</h4>
+              <p>Validated video consultations, appointment scheduling, prescriptions, and notifications. Achieved strong cross-browser compatibility and reduced post-release defects by 40%.</p>
+            </div>
+
+            <div class="proj">
+              <h4>AlexiaHTC Medical Management System</h4>
+              <p>Performed regression testing for patient registration and billing modules; implemented automation for repetitive workflows and improved release stability.</p>
+            </div>
+
+            <div class="proj">
+              <h4>I-Medicus Telemedicine Platform</h4>
+              <p>Tested mobile and web features like appointment booking and in-app messaging; ensured responsive behavior across devices.</p>
+            </div>
+          </div>
+
+          <div class="card achievements">
+            <h3>Achievements</h3>
+            <ul>
+              <li>Delivered 15+ healthcare releases with zero critical production issues.</li>
+              <li>Improved testing efficiency by 25% via automation initiatives.</li>
+              <li>Recognized for strong documentation standards and knowledge sharing.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Resume based on your uploaded information. © Riya Pandey</p>
     </footer>
-
+  </div>
 </body>
 </html>
+"""
+
+css = """
+/* Minimalist premium resume CSS */
+:root{
+  --accent: #0d6efd; /* premium blue */
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --text: #0f172a;
+}
+
+* { box-sizing: border-box; }
+html,body{ height:100%; margin:0; padding:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); }
+
+.page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(12, 20, 50, 0.08);
+  border: 1px solid rgba(13, 23, 44, 0.04);
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(15,23,42,0.06);
+}
+
+.header-left h1{
+  font-size:34px;
+  margin:0;
+  color:var(--text);
+  letter-spacing: -0.5px;
+}
+.title{
+  color:var(--muted);
+  margin-top:6px;
+  font-weight:600;
+}
+
+/* Contact block */
+.header-right { text-align:right; font-size:14px; color:var(--muted); }
+.header-right a{ color:var(--accent); text-decoration:none; }
+.header-right a:hover{ text-decoration:underline; }
+
+.content{ margin-top:20px; }
+
+.card{ background: transparent; padding:14px 0; }
+
+.summary p{ font-size:15px; color:#374151; line-height:1.5; margin-top:6px; }
+
+.columns{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:22px;
+  margin-top:8px;
+}
+
+/* Left column */
+.left-column .card{ background: #ffffff; padding:16px; border-radius:10px; border:1px solid rgba(15,23,42,0.04); }
+.left-column h3{ margin-top:0; color:var(--accent); margin-bottom:8px; }
+.left-column ul{ list-style:none; padding-left:0; color:#294155; }
+.left-column li{ padding:6px 0; border-bottom:1px dashed rgba(13,23,44,0.04); font-size:14px; }
+
+.education p{ margin:6px 0; color:#374151; font-size:14px; }
+
+.certifications ul{ list-style:none; padding-left:0; font-size:14px; color:#374151; }
+.certifications li{ padding:6px 0; border-bottom:1px dashed rgba(13,23,44,0.04); }
+
+/* Right column */
+.right-column .card{ background: #ffffff; padding:16px; border-radius:10px; border:1px solid rgba(15,23,42,0.04); margin-bottom:14px; }
+.right-column h3{ margin-top:0; color:var(--accent); margin-bottom:6px; }
+.job h4{ margin:0; font-size:16px; color:var(--text); }
+.period{ color:var(--muted); font-size:13px; margin:6px 0 10px; }
+.job ul{ margin-left:18px; color:#374151; }
+.job li{ margin-bottom:8px; font-size:14px; line-height:1.45; }
+
+.projects .proj{ margin-top:10px; padding-top:10px; border-top:1px solid rgba(13,23,44,0.04); }
+.projects .proj h4{ margin:0; font-size:15px; color:#0b3b5c; }
+.projects p{ color:#374151; margin:6px 0 0; font-size:14px; }
+
+.achievements ul{ list-style: none; padding-left:0; color:#374151; }
+.achievements li{ margin-bottom:8px; font-size:14px; }
+
+.footer{ text-align:center; margin-top:18px; color:var(--muted); font-size:13px; }
+@media (max-width:880px){
+  .columns{ grid-template-columns: 1fr; }
+  .header{ flex-direction:column; align-items:flex-start; gap:10px; }
+  .header-right{ text-align:left; }
+}
+"""
+
+# write files
+html_path = "/mnt/data/riya_resume.html"
+css_path = "/mnt/data/riya_resume.css"
+
+with open(html_path, "w", encoding="utf-8") as f:
+    f.write(html)
+
+with open(css_path, "w", encoding="utf-8") as f:
+    f.write(css)
+
+html_path, css_path
+
